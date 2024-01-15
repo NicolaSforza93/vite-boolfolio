@@ -18,9 +18,16 @@ export default {
 </script>
 
 <template>
-    <div class="project-card">
-        <h4>{{ project.name_project }}</h4>
-        <p v-if="project.type">{{ project.type.name }}</p>
+    <div class="card">
+        <div class="card-header">
+            <h4>{{ project.name_project }}</h4>
+        </div>
+        <div class="card-body">
+            <p v-if="project.type">Tipologia: {{ project.type.name }}</p>
+            <p>Data Creazione: {{ project.date_creation }}</p>
+            <p>Stato: Completato</p>
+            <a class="read-more" href="#">Leggi di più &#8594</a>
+        </div>
     </div>
 </template>
 

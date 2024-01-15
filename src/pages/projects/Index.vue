@@ -14,10 +14,12 @@ export default {
 </script>
 
 <template>
-    <h1>I miei Progetti</h1>
     <div class="container">
+        <h1>I miei Progetti</h1>
         <div class="grid">
-            <ProjectCard v-for="(project, index) in store.projects" :key="index" :project="project" />
+            <div class="project-card" v-for="(project, index) in store.projects" :key="project.id">
+                <ProjectCard :project="project" />
+            </div>
         </div>
     </div>
 </template>
