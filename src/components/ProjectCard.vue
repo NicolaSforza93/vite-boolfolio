@@ -24,7 +24,8 @@ export default {
         </div>
         <div class="card-body">
             <p v-if="project.type">Tipologia: {{ project.type.name }}</p>
-            <a class="read-more" href="#">Leggi di più &#8594</a>
+            <router-link :to="{ name: 'projects.show', params: { name_project: project.name_project } }">Scopri di più
+                &#8594</router-link>
         </div>
     </div>
 </template>

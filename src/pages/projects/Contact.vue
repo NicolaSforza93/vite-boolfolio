@@ -21,7 +21,7 @@ export default {
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput2" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1">
+                <input type="email" class="form-control" id="exampleFormControlInput2">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Messaggio</label>
