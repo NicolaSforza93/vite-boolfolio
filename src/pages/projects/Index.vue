@@ -66,4 +66,4 @@ export default {
 .next {
     right: 0;
 }
-</style>../../store
+</style>

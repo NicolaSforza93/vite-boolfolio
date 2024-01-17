@@ -18,6 +18,11 @@ export default {
                 .then(res => {
                     // console.log(res.data.results);
                     this.project = res.data.results;
+                }).catch((error) => {
+                    // console.log(error.response);
+                    if (error.response.status === 404) {
+                        this.$router.push({ name: 'not-found' });
+                    }
                 })
         }
     },
@@ -39,6 +44,8 @@ export default {
                     class="badge text-bg-dark p-2 fw-medium">{{ technology.name }}</li>
             </ul>
             <p>{{ project.date_creation }}</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatem fugit? Saepe aspernatur deserunt,
+                facilis corrupti maiores sit doloribus unde.</p>
         </div>
     </div>
 </template>
