@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container py-5">
         <h1>{{ title }}</h1>
         <h2>{{ job_title }}</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem vero doloribus quibusdam obcaecati veniam

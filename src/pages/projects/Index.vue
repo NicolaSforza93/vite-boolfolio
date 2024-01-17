@@ -35,8 +35,8 @@ export default {
 </script>
 
 <template>
-    <h1 class="text-center">I miei Progetti</h1>
-    <div class="container position-relative">
+    <div class="container position-relative py-5">
+        <h1 class="text-center">I miei Progetti</h1>
         <div class="carousel bg-body-secondary p-3">
             <div class="prev fs-1" @click="prevImage">&#8592</div>
             <div class="next fs-1" @click="nextImage">&#8594</div>

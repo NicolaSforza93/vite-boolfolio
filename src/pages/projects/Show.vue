@@ -35,7 +35,7 @@ export default {
 
 <template>
     <div v-if="project">
-        <div class="container">
+        <div class="container py-5">
             <h1>{{ project.name_project }}</h1>
             <p v-if="project.type" class="text-decoration-underline">{{ project.type.name }}</p>
             <!-- <p>{{ project.type?.name }}</p> -->
