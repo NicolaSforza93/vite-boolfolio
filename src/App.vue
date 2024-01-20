@@ -36,5 +36,5 @@ export default {
 
 <style lang="scss">
 @use './styles/general.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 </style>
-./store

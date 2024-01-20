@@ -36,10 +36,14 @@ export default {
 
 <template>
     <div class="container position-relative py-5">
-        <h1 class="text-center">I miei Progetti</h1>
-        <div class="carousel bg-body-secondary p-3">
-            <div class="prev fs-1" @click="prevImage">&#8592</div>
-            <div class="next fs-1" @click="nextImage">&#8594</div>
+        <h1 class="title text-center mb-3">I miei migliori Progetti</h1>
+        <div class="carousel">
+            <div class="prev fs-2" @click="prevImage">
+                <font-awesome-icon :icon="['fas', 'chevron-left']" beat />
+            </div>
+            <div class="next fs-2" @click="nextImage">
+                <font-awesome-icon :icon="['fas', 'chevron-right']" beat />
+            </div>
             <div class="row">
                 <div class="col-6" v-for="(project, index) in visibleProject" :key="project.id">
                     <ProjectCard :project="project" />
@@ -50,8 +54,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.title {
+    font-family: 'Bangers', system-ui;
+}
+
 .prev,
 .next {
+    color: rgb(148, 206, 242);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

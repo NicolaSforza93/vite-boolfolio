@@ -8,6 +8,7 @@ export default {
     },
     data() {
         return {
+            technologies: ['Css', 'Javascript', 'Vue', 'Laravel', 'Php', 'Sass', 'Bootstrap', 'MySql', 'Node'],
             store,
             project: null
         }
@@ -36,18 +37,31 @@ export default {
 <template>
     <div v-if="project">
         <div class="container py-5">
-            <h1>{{ project.name_project }}</h1>
-            <p v-if="project.type" class="text-decoration-underline">{{ project.type.name }}</p>
-            <!-- <p>{{ project.type?.name }}</p> -->
-            <ul class="d-flex gap-3 ps-0">
-                <li v-for="(technology, index) in project.technologies" :key="technology.id"
-                    class="badge text-bg-dark p-2 fw-medium">{{ technology.name }}</li>
-            </ul>
-            <p>{{ project.date_creation }}</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatem fugit? Saepe aspernatur deserunt,
-                facilis corrupti maiores sit doloribus unde.</p>
+            <div class="row">
+                <div class="col-6">
+                    <h1>{{ project.name_project }}</h1>
+                    <p v-if="project.type" class="text-decoration-underline">{{ project.type.name }}</p>
+                    <!-- <p>{{ project.type?.name }}</p> -->
+                    <h5>Tecnologie utilizzate</h5>
+                    <ul class="tech-list d-flex gap-3 ps-0">
+                        <li class="list-item" v-for="(technology, index) in project.technologies" :key="technology.id">
+                            <img :src="`/technologies/${technology.name}.png`" alt="">
+                        </li>
+                    </ul>
+                    <p>{{ project.description }}</p>
+                </div>
+                <div class="col-6" v-if="project.cover_image">
+                    <figure class="ratio ratio-1x1">
+                        <img :src="project.cover_image" alt="" class="object-fit-contain">
+                    </figure>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.list-item img {
+    width: 55px;
+}
+</style>
